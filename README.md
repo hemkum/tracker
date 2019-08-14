@@ -1,6 +1,13 @@
 # tracker README
 This is the README for extension "tracker".
 
+## Features/logged data
+1. Coordinates and size ( width, height ) of editor window.
+2. Name of active file/tab.
+3. Top and bottom line number along with timestamp whenever user scrolls.
+4. All this data is saved in *$(homedir)/vscode-tracker/data.xml* file   
+where $(homedir) is *C:/Users/username/* in Windows and */home/username/* in Linux.
+
 ## Requirements
 > For using extension 
 1. Vscode IDE
@@ -53,13 +60,6 @@ $ vsce package                      / Create .vsix file
 $ code --install-extension *.vsix   / Install .vsix as extension
 ```
 
-## Features
-1. Coordinates and size ( width, height ) of editor window.
-2. Name of active file/tab.
-3. Top and bottom line number along with timestamp whenever user scrolls.
-4. All this data is saved in *$(homedir)/vscode-tracker/data.xml* file   
-where $(homedir) is *C:/Users/username/* in Windows and */home/username/* in Linux.
-
 ## How to use
 1. Open file/files in vscode
 2. **Start extension** using shortcut Ctrl + Alt + O
@@ -103,7 +103,6 @@ Steps to run extension in developement host
 * You can also reload (`Ctrl+R` ) the VS Code window with your extension to load your changes.
 
 ## Known Issues
-
 1. Set npm proxy to successfully install npm modules if you are behind a proxy server.
 
 
