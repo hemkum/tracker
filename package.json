@@ -1,0 +1,83 @@
+{
+	"name": "tracker",
+	"displayName": "tracker",
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "hemkum",
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.starttracker"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.starttracker",
+				"title": "Start tracker"
+			},
+			{
+				"command": "extension.stoptracker",
+				"title": "Stop tracker"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.starttracker",
+				"key": "ctrl+alt+o",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.stoptracker",
+				"key": "ctrl+alt+l"
+			},
+			{
+				"key": "ctrl+down",
+				"command": "editorScroll",
+				"args": {
+					"to": "down",
+					"by": "line",
+					"revealCursor": true,
+					"value": 3
+				}
+			},
+			{
+				"key": "ctrl+up",
+				"command": "editorScroll",
+				"args": {
+					"to": "up",
+					"by": "line",
+					"revealCursor": true,
+					"value": 3
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.29.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.0.0-next.0"
+	},
+	"dependencies": {
+		"clipboardy": "^2.1.0",
+		"node-key-sender": "^1.0.11",
+		"xmlbuilder": "^13.0.2"
+	}
+}
