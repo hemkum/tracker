@@ -26,6 +26,8 @@ This is the README for extension "tracker".
 Installation : `$ npm install -g vsce`
 2. yo, generator-code : Scaffolds project ready for development.   
 Installation : `$ npm install -g yo generator-code`
+3. node-gyp : for building the node native modules.
+Installation : `$ npm install -g node-gyp`
 
 ## Installing Extension
 ### Using installable binary (command line):
