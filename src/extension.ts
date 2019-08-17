@@ -62,7 +62,7 @@ export function generate_winsize_data() {
 		var winsize_array = new Array(document.querySelector('.part.activitybar.left').offsetWidth + document.querySelector('.part.sidebar.left').offsetWidth ,
 			document.querySelector('.part.titlebar.inactive').offsetHeight + document.querySelector('.title.tabs.show-file-icons').offsetHeight ,
 			document.querySelector('.monaco-scrollable-element.editor-scrollable.vs').offsetWidth
-			/**- document.querySelector('.minimap-shadow-visible').offsetWidth - document.querySelector('.minimap.slider-mouseover').offsetWidth */ ,
+			- document.querySelector('.minimap-shadow-visible').offsetWidth - document.querySelector('.minimap.slider-mouseover').offsetWidth ,
 			document.querySelector('.monaco-scrollable-element.editor-scrollable.vs').offsetHeight, Date.now() );			  
 		if(os.platform() === 'win32' && typeof winsize_array !== 'undefined' && winsize_array.length > 0 ) 
 		fs.writeFileSync( os.homedir().concat("/vscode-tracker/winsize.txt") ,winsize_array);

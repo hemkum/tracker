@@ -68,7 +68,7 @@ $ code --install-extension *.vsix   / Install .vsix as extension
 5. Press Ctrl + Alt + L to **stop extension** and save data to data.xml file.
 6. To collect another set of data, follow step 1-5.
 7. Previous file is overwritten on starting extension again.  
- Note: It is necessary to stop the extension, once started before starting extension again.
+ Note: It is necessary to stop the extension, once it is started before starting extension again.
 
 ## Extension Settings
 * `package.json` - this is the manifest file in which you declare your extension and command.   
@@ -91,7 +91,7 @@ Currently it is set to -> onCommand:extension.starttracker
   * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
 
 ## Extension developement host
-One can modify and run extension source code in developement host mode without the need to compile it into .vsix file and installing .vsix extension.
+One can modify and run extension in developement host mode without the need to compile it into .vsix file and installing .vsix extension.
 
 Steps to run extension in developement host 
 
